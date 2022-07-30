@@ -20,12 +20,11 @@ textarea {
   border-radius: 0;
   border-bottom: 10px solid black;
 }
-
-/* add past/present/future here */
+/* append past/present/future to .description el */
 .description {
   white-space: pre-wrap;
   width: 80%;
-  align-items: center;
+  justify-content: center;
 }
 
 .time-block {
@@ -37,6 +36,7 @@ textarea {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
+  justify-content: center;
 }
 
 .hour {
