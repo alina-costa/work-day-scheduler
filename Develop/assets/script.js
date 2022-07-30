@@ -9,19 +9,15 @@ function displayDate() {
 displayDate();
 
 // save events in local stoarge so it remains when the page is refreshed
-// use target to take textContent from the input where the save button was clicked -
+// get parent (section) id (block-#) to take textContent from the input where the save button was clicked -
 // and update that with whatever was in local storage
 
-function saveTasks() {
-  console.log("what the heck");
-  var taskInput = document.getElementsByTagName("input").textContent;
-  // localStorage.setItem("savedTask", JSON.stringify())
+function saveTasks(event) {
+  var target = $(event.target);
+  var taskInput = $(target).parent().attr("id");
+  console.log(taskInput);
 }
 
 saveButtonEl.forEach((btn) => {
   btn.addEventListener("click", saveTasks);
 });
-
-// taskInput.forEach((input) => {
-//   input.addEventListener("input", saveTasks);
-// });
