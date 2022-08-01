@@ -1,4 +1,6 @@
 var saveButtonEl = Array.from(document.getElementsByClassName("saveBtn"));
+var timeBlockEl = document.querySelector(".time-block");
+var userInput = "";
 
 // get and display current date with moment.js
 var currentDayEl = document.getElementById("currentDay");
@@ -8,14 +10,15 @@ function displayDate() {
 }
 displayDate();
 
-// save events in local stoarge so it remains when the page is refreshed
-// get parent (section) id (block-#) to take textContent from the input where the save button was clicked -
-// and update that with whatever was in local storage
+// save descriptions in local stoarge so it remains when the page is refreshed
+// get input from where the save button was clicked -
+// and update that into local storage
 
 function saveTasks(event) {
   var target = $(event.target);
-  var taskInput = $(target).parent().attr("id");
-  console.log(taskInput);
+  var taskInput = $(target).prev().attr("id");
+  userInput = $(this).prev().val();
+  console.log(userInput);
 }
 
 saveButtonEl.forEach((btn) => {
