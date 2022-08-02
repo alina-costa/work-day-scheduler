@@ -23,6 +23,7 @@ saveButtonEl.forEach((btn) => {
   btn.addEventListener("click", saveTasks);
 });
 
+
 //function for relative time color
 function currentHour() {
   var currentTime = moment().hour();
@@ -42,3 +43,4 @@ function currentHour() {
 currentHour();
 
 // save userInput in local stoarge so it remains when the page is refreshed
+
