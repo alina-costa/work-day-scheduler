@@ -23,19 +23,20 @@ saveButtonEl.forEach((btn) => {
   btn.addEventListener("click", saveTasks);
 });
 
-
 //function for relative time color
 function currentHour() {
   var currentTime = moment().hour();
   for (i = 0; i < inputElArr.length; i++) {
     var inputElId = inputElArr[i].getAttribute("id");
-    if (inputElId + 12 < currentTime) {
+    var inputIdNum = Number(inputElId);
+
+    if (currentTime < inputIdNum) {
       $(inputElArr[i]).addClass("future");
     }
-    if (inputElId + 12 == currentTime) {
+    if (currentTime === inputIdNum) {
       $(inputElArr[i]).addClass("present");
     }
-    if (inputElId + 12 > currentTime) {
+    if (currentTime > inputIdNum) {
       $(inputElArr[i]).addClass("past");
     }
   }
@@ -43,4 +44,3 @@ function currentHour() {
 currentHour();
 
 // save userInput in local stoarge so it remains when the page is refreshed
-
