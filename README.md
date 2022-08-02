@@ -11,4 +11,5 @@ The user can click inside the time block and input whatever tasks need to be don
 Screenshots of the application are below.
 
 <img width="1436" alt="Screen Shot 2022-08-01 at 10 49 30 PM" src="https://user-images.githubusercontent.com/102388724/182281308-4dfe587a-d131-4a4e-9125-3c94c64b5621.png">
-<img width="1088" alt="Screen Shot 2022-08-01 at 10 49 53 PM" src="https://user-images.githubusercontent.com/102388724/182281360-8b8682d7-d23c-4064-a889-9cd8773131b3.png">
+
+<img width="1048" alt="Screen Shot 2022-08-02 at 2 10 58 PM" src="https://user-images.githubusercontent.com/102388724/182444915-8a46bc7d-c40d-4628-b7b2-be4ab92727c1.png">
