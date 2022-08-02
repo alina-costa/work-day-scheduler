@@ -38,7 +38,13 @@ function currentHour() {
   var currentTime = moment().hour();
   for (i = 0; i < inputElArr.length; i++) {
     var inputElId = inputElArr[i].getAttribute("id");
-    while (inputElId + 12 > currentTime) {
+    if (inputElId + 12 < currentTime) {
+      $(inputElArr[i]).addClass("future");
+    }
+    if (inputElId + 12 == currentTime) {
+      $(inputElArr[i]).addClass("present");
+    }
+    if (inputElId + 12 > currentTime) {
       $(inputElArr[i]).addClass("past");
     }
   }
